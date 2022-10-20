@@ -1,0 +1,581 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn:focus{
+    outline: none;
+    box-shadow: none !important;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    color: #333;
+    background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Patua One', 'cursive';
+}
+
+.Main_content{
+    width: 80vw;
+    height: 80vh;
+}
+
+.Buttons_class{
+    margin-top: -35px;
+    color: #444;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.New_Game_Button{
+    float: right;
+}
+
+.reload_btn{
+    border-radius: 50rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.help_btn{
+    border-radius: 50rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.New_Game_Button:hover{
+    transform: translateY(-1px);
+    transition: 0.2s;
+}
+
+.Help_Button:hover{
+    transform: translateY(-1px);
+    transition: 0.2s;
+}
+
+.reload_img{
+    width: 20px;
+    height: 20px;
+}
+
+.how_to_play_img{
+    width: 20px;
+    height: 20px;
+}
+
+.player_1{
+    border-radius: 15px;
+    overflow: hidden;
+    height: 60vh;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    align-items: center;
+}
+
+.Player-active {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.Player-active .Current_Score{
+    opacity: 1;
+}
+
+.Player1_heading{
+    margin-top: 10%;
+}
+
+.Player1_Score{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.player1_current_heading{
+    padding-top: 5%;
+}
+
+.player1_current_score{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.player_2{
+    font-weight: bold;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 60vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    align-items: center;
+}
+
+.Player2_Score{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.Player2_heading{
+    margin-top: 10%;
+}
+
+.player2_current_heading{
+    padding-top: 5%;
+}
+
+.player2_current_score{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.Current_Score{
+    width: 60%;
+    text-align: center;
+    background-color: #c7365f;
+    opacity: 0.8;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.Current_Score{
+    width: 60%;
+    text-align: center;
+    background-color: #c7365f;
+    opacity: 0.4;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.Dice_icon{
+    width: 100px;
+    height: 80px;
+}
+
+.Roll_Dice_Button{
+    float: right;
+}
+
+.Roll_Dice_Button:hover{
+    transform: translateY(-1px);
+    transition: 0.2s;
+}
+
+.Hold_score_Button:hover{
+    transform: translateY(-1px);
+    transition: 0.2s;
+}
+
+.roll_dice_btn{
+    border-radius: 50rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.roll_dice_img{
+    width: 30px;
+    height: 30px;
+}
+
+.hold_score_btn{
+    border-radius: 50rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.hold_score_img{
+    width: 28px;
+    height: 28px;
+}
+
+.hidden{
+    display: none;
+}
+
+.Player-Winner{
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+
+/* // X-Small devices (portrait phones, less than 320px) */
+@media (max-width: 319.98px) {
+    .Main_content{
+        width: 80vw;
+        height: 70vh;
+        margin-top: -25%;
+    }
+
+    .buttons{
+        width: 100%;
+    }
+
+    .Buttons_class{
+        width: 100%;
+    }
+
+    .reload_btn{
+        font-size: 10px;
+    }
+
+    .reload_img{
+        width: 12px;
+        height: 12px;
+    }
+
+    .help_btn{
+        font-size: 10px;
+    }
+
+    .how_to_play_img{
+        width: 12px;
+        height: 12px;
+    }
+
+    .player_1{
+        height: 35vh;
+    }
+
+    .player_2{
+        height: 35vh;
+    }
+
+    .Current_Score{
+        margin-top: -5%;
+    }
+
+    .Current_Score{
+        margin-top: -5%;
+    }
+
+    .roll_dice_btn{
+        font-size: 12px;
+    }
+
+    .hold_score_btn{
+        font-size: 12px;
+    }
+
+    .roll_dice_img{
+        width: 13px;
+        height: 13px;
+    }
+
+    .hold_score_img{
+        width: 13px;
+        height: 13px;
+    }
+
+    .Game_play_buttons{
+        margin-top: 20%;
+    }
+
+    .Dice_icon{
+        width: 70px;
+        height: 50px;
+        margin-top: 950%;
+    }
+}
+
+/* // X-Small devices (portrait phones, greater than 320px and less than 375px) */
+@media (min-width: 320px) and (max-width: 374.98px) {
+    .Main_content{
+        width: 80vw;
+        height: 70vh;
+        margin-top: -25%;
+    }
+
+    .buttons{
+        width: 100%;
+    }
+
+    .Buttons_class{
+        width: 100%;
+    }
+
+    .reload_btn{
+        font-size: 10px;
+    }
+
+    .reload_img{
+        width: 12px;
+        height: 12px;
+    }
+
+    .help_btn{
+        font-size: 10px;
+    }
+
+    .how_to_play_img{
+        width: 12px;
+        height: 12px;
+    }
+
+    .player_1{
+        height: 35vh;
+    }
+
+    .player_2{
+        height: 35vh;
+    }
+
+    .Current_Score{
+        margin-top: -5%;
+    }
+
+    .Current_Score{
+        margin-top: -5%;
+    }
+
+    .roll_dice_btn{
+        font-size: 12px;
+    }
+
+    .hold_score_btn{
+        font-size: 12px;
+    }
+
+    .roll_dice_img{
+        width: 13px;
+        height: 13px;
+    }
+
+    .hold_score_img{
+        width: 13px;
+        height: 13px;
+    }
+
+    .Game_play_buttons{
+        margin-top: 20%;
+    }
+
+    .Dice_icon{
+        width: 70px;
+        height: 50px;
+        margin-top: 950%;
+    }
+}
+
+/* // X-Small devices (portrait phones, greater than 375px and less than 425px) */
+@media (min-width: 375px) and (max-width: 424.98px) {
+    .Main_content{
+        width: 80vw;
+        height: 70vh;
+        margin-top: -25%;
+    }
+
+    .buttons{
+        width: 100%;
+    }
+
+    .Buttons_class{
+        width: 100%;
+    }
+
+    .reload_btn{
+        font-size: 11px;
+    }
+
+    .reload_img{
+        width: 12px;
+        height: 12px;
+    }
+
+    .help_btn{
+        font-size: 11px;
+    }
+
+    .how_to_play_img{
+        width: 12px;
+        height: 12px;
+    }
+
+    .player_1{
+        height: 35vh;
+    }
+
+    .player_2{
+        height: 35vh;
+    }
+
+    .Current_Score{
+        margin-top: -5%;
+    }
+
+    .Current_Score{
+        margin-top: -5%;
+    }
+
+    .roll_dice_btn{
+        font-size: 12px;
+    }
+
+    .hold_score_btn{
+        font-size: 12px;
+    }
+
+    .roll_dice_img{
+        width: 13px;
+        height: 13px;
+    }
+
+    .hold_score_img{
+        width: 13px;
+        height: 13px;
+    }
+
+    .Game_play_buttons{
+        margin-top: 20%;
+    }
+
+    .Dice_icon{
+        width: 70px;
+        height: 50px;
+        margin-top: 950%;
+    }
+}
+
+/* // X-Small devices (portrait phones, greater than 425px and less than 576px) */
+@media (min-width: 425px) and (max-width: 575.98px) { 
+    .Main_content{
+        width: 80vw;
+        height: 70vh;
+        margin-top: -23%;
+    }
+
+    .Buttons_class{
+        width: 100%;
+    }
+
+    .reload_btn{
+        font-size: 12px;
+    }
+
+    .help_btn{
+        font-size: 12px;
+    }
+
+    .Dice_icon{
+        width: 80px;
+        height: 60px;
+        margin-top: 800%;
+    }
+
+    .Player1_heading{
+        margin-top: 5%;
+    }
+
+    .Player2_heading{
+        margin-top: 5%;
+    }
+
+    .player_1{
+        height: 35vh;
+    }
+
+    .Current_Score{
+        margin-top: -8%;
+    }
+
+    .player_2{
+        height: 35vh;
+    }
+
+    .Current_Score{
+        margin-top: -8%;
+    }
+
+    .Game_play_buttons{
+        margin-top: 10%;
+    }
+
+    .roll_dice_btn{
+        font-size: 12px;
+    }
+
+    .hold_score_btn{
+        font-size: 12px;
+    }
+}
+
+/* // Medium devices (tablets, greater than 576px and less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .Main_content{
+        width: 90vw;
+        height: 60vh;
+        margin-top: -12%;
+    }
+
+    .Player1_heading{
+        margin-top: 25%;
+    }
+
+    .Player2_heading{
+        margin-top: 25%;
+    }
+
+    .Dice_icon{
+        width: 80px;
+        height: 60px;
+    }
+
+    .Current_Score{
+        width: 40vw;
+    }
+
+    .Current_Score{
+        width: 40vw;
+    }
+}
+
+/* // Medium devices (tablets, greater than 768px and less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Player1_heading{
+        margin-top: 20%;
+    }
+
+    .Player2_heading{
+        margin-top: 20%;
+    }
+
+    .Current_Score{
+        width: 30vw;
+    }
+
+    .Current_Score{
+        width: 30vw;
+    }
+
+    .Dice_icon{
+        width: 80px;
+        height: 60px;
+        margin-bottom: 130%;
+    }
+}
+
+/* // Medium devices (tablets, greater than 992px and less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .Player1_heading{
+        margin-top: 15%;
+    }
+
+    .Player2_heading{
+        margin-top: 15%;
+    }
+
+    .Current_Score{
+        width: 30vw;
+    }
+
+    .Current_Score{
+        width: 30vw;
+    }
+
+    .Dice_icon{
+        width: 90px;
+        height: 70px;
+        margin-bottom: 100%;
+    }
+}

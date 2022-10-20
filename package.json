@@ -1,0 +1,19 @@
+{
+  "name": "dice-game",
+  "version": "1.0.0",
+  "description": "Roll Dice and win the game",
+  "default": "Game.html",
+  "scripts": {
+    "start": "parcel Game.html",
+    "build": "parcel build Game.html --dist-dir ./dist"
+  },
+  "keywords": [
+    "Dice",
+    "Game"
+  ],
+  "author": "Utkarsh",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Dice Game" content="This is a game which has been developed to check your luck and to check your ability to handel peer pressure."/>
+<!-- BootStrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Favicon -->
+<link rel='shortcut icon' type='image/x-icon' href='./Images/Favicon.png' />
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+<!-- Css -->
+<link rel="stylesheet" href="./Game.css">
+<title>Dice Game</title>
+</head>
+<body>
+    <!-- Content -->
+    <section class="wrapper">
+        <div class="Main_content container-md position-absolute top-50 start-50 translate-middle py-5">
+            <!-- Top Buttons -->
+            <div class="Buttons_class container-md">
+                <div class="buttons row row-cols-2 pb-3">
+                     <div class="col-sm-6 col-6">
+                          <div class="New_Game_Button">
+                               <button type="button" class="reload_btn btn btn-light"><img class="reload_img img-fluid mb-1" src="./Images/Reload img.png">  New Game</button>    
+                          </div>
+                     </div>
+                     <div class="col-sm-6 col-6">
+                          <div class="Help_Button">
+                               <button type="button" class="help_btn btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">How to Play  <img class="how_to_play_img img-fluid mb-1" src="./Images/exclamation mark img.png"></button>
+                          </div>
+                     </div>
+                </div>
+           </div>
+           <!-- Game and Players Contents -->
+            <div class="row row-cols-2">
+                <div class="player_1 Player-active col-xxl-6 col-sm-6 col-12 shadow-lg" id="player--0">
+                    <h1 class="Player1_heading">Player 1</h1>
+                    <h1 class="Player1_Score" id="Score--0">0</h1>
+                    <div class="Current_Score mx-auto">
+                        <h4 class="player1_current_heading">Current Score</h4>
+                        <h4 class="player1_current_score" id="Current--0">0</h4>
+                    </div>
+                </div>
+                <div class="player_2 col-xxl-6 col-sm-6 col-12 shadow-lg" id="player--1">
+                    <h1 class="Player2_heading">Player 2</h1>
+                    <h1 class="Player2_Score" id="Score--1">0</h1>
+                    <div class="Current_Score mx-auto">
+                        <h4 class="player2_current_heading">Current Score</h4>
+                        <h4 class="player2_current_score" id="Current--1">0</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Game play Icons -->
+            <div class="Game_Play_Content">
+                <div class="Game_Content_Dice_icon row position-absolute top-50 start-50 translate-middle mx-auto">
+                    <img class="Dice_icon hidden  img-fluid" src="./Images/dice_img_of_value_1.png">
+                </div>
+            </div>
+            <!-- Game Play Buttons -->
+            <div class="Game_play_buttons pt-3">
+                <div class="row row-cols-2">
+                    <div class="col-sm-6 col-6">
+                        <div class="Roll_Dice_Button">
+                             <button type="button" class="roll_dice_btn btn btn-light"><img class="roll_dice_img img-fluid mb-1" src="./Images/Roll_Dice_Icon.png">  Roll Dice</button>    
+                        </div>
+                   </div>
+                   <div class="col-sm-6 col-6">
+                        <div class="Hold_score_Button">
+                             <button type="button" class="hold_score_btn btn btn-light">Hold Score  <img class="hold_score_img img-fluid mb-1" src="./Images/Hold_Score_Icon.png"></button>
+                        </div>
+                   </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <section class="modal_here">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">Instructions</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                 <ul class="Indtructions_list">
+                      <li class="Instruction-items">Click on "Roll Dice" button to roll a dice.</li>
+                      <li class="Instruction-items"> The Dice's are randomly rolled ranging from 1 to 6 and as you roll the dice again and again, your previous dice roll's score will be updated and will get added with your new dice roll score, which can be seen in the "Current Score" Box.</li>
+                      <li class="Instruction-items">[NOTE: If you rolled a dice of score 1, then you will loose all your current score.]</li>
+                      <li class="Instruction-items">Also, if you don't want to roll dice more than once and you don't want to loose your current score as well, then you can use the "Hold Score" button to hold your score and switch players as well.</li>
+                      <li class="Instruction-items">The player to first score 100 points win's th game!!</li>
+                      <li class="Instruction-items">[Click on (Reload Game) button to start/reload the game again.]</li>
+                 </ul>
+            </div>
+            <div class="modal-footer">
+                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+            </div>
+       </div>
+     </section>
+<script src="./Game.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
